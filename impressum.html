@@ -25,6 +25,19 @@ h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(30px,5vw
 .liste{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;padding:22px 0}
 .liste a{display:block;background:var(--card);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 6px 24px rgba(40,30,20,.07)}
 .liste img{width:100%;aspect-ratio:2/3;object-fit:cover}.liste .t{padding:14px 16px;font-weight:700}
+.hero2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:36px 0 10px}
+.hero2 img{width:100%;border-radius:22px;box-shadow:0 12px 40px rgba(40,30,20,.14)}
+@media(max-width:760px){.hero2{grid-template-columns:1fr}}
+.meta{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:10px}
+.meta b{color:var(--ink)}
+.stars{color:#E0A100;font-size:13px}.stars small{color:var(--muted)}
+.vorstellung{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:center;background:var(--card);border-radius:22px;padding:22px;margin:30px 0;box-shadow:0 6px 24px rgba(40,30,20,.07)}
+.vorstellung video{width:100%;border-radius:16px;aspect-ratio:9/16;background:#000}
+@media(max-width:760px){.vorstellung{grid-template-columns:1fr}}
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.social a{display:inline-flex;align-items:center;gap:8px;background:var(--akzent2);color:var(--ink);text-decoration:none;padding:9px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.social a:hover{background:var(--akzent);color:#fff}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;margin:34px 0 4px}
 footer{margin-top:40px;padding:28px 0 40px;border-top:1px solid var(--akzent2);color:var(--muted);font-size:14px}
 footer a{color:var(--muted)}
 </style></head><body><div class="wrap">
