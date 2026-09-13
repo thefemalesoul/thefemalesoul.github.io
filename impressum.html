@@ -46,6 +46,17 @@ h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;margin:34
 .bereiche a{background:var(--card);border:1px solid var(--akzent2);color:var(--ink);text-decoration:none;padding:12px 16px;border-radius:14px;font-weight:700;font-size:15px}
 .bereiche a small{display:block;font-weight:400;color:var(--muted);font-size:12px}
 .bereiche a:hover{border-color:var(--akzent)}
+.rubriken{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px;padding:16px 0 8px}
+.rubrik{background:var(--card);border-radius:20px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 6px 24px rgba(40,30,20,.07);display:flex;flex-direction:column}
+.rubrik img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.rubrik .rt{padding:16px 18px 18px}.rubrik h3{margin:0 0 6px;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px}
+.rubrik p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.rubrik:hover h3{color:var(--akzent)}
+.cta{margin:44px 0 10px;background:linear-gradient(135deg,#2B2622,#4A3C35);color:#fff;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.cta h2{color:#fff;margin:0 0 10px}.cta p{margin:0;color:#E9DED4;font-size:16px;max-width:640px}
+.cta .btn{background:#fff;color:var(--ink);font-size:15px;padding:14px 20px}
+.cta small{display:block;color:#BFB2A6;font-size:12px;margin-top:10px}
+@media(max-width:760px){.cta{grid-template-columns:1fr}}
 footer{margin-top:40px;padding:28px 0 40px;border-top:1px solid var(--akzent2);color:var(--muted);font-size:14px}
 footer a{color:var(--muted)}
 </style></head><body><div class="wrap">
