@@ -8,8 +8,7 @@
 <meta property="og:url" content="https://thefemalesoul.github.io/profil-check.html">
 <meta property="og:image" content="https://thefemalesoul.github.io/media/valeria.jpg">
 <meta name="p:domain_verify" content="56e387f7f84581808b64b9bf8817f874"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="fonts/guide-fonts.css" rel="stylesheet">
 <style>
 :root{--cream:#FFFBF8;--plum:#4A3B6B;--ink:#3B3450;--mid:#7A7290;--line:#E6DDEF;
 --pnk:#F9DCE6;--pnk-d:#BE5A83;--lil:#E7DFF5;--lil-d:#6F55A8;--yel:#FBF0C4;--yel-d:#8F6F0A;
@@ -31,6 +30,17 @@ h1 em{display:block;font-style:italic;font-weight:600;color:var(--pnk-d);font-si
 .cta{display:block;width:100%;border:none;cursor:pointer;background:var(--pnk-d);color:#fff;font-weight:600;font-size:16.5px;padding:18px 20px;border-radius:999px;text-align:center;text-decoration:none;box-shadow:0 10px 24px -10px rgba(190,90,131,.55);transition:transform .15s ease}
 .cta:active{transform:scale(.98)}
 .hinweis{min-height:22px;margin-top:14px;font-size:13.5px;color:var(--mid);text-align:center}
+.form{display:grid;gap:12px;margin:0}
+.form label{font-size:13px;font-weight:600;color:var(--plum)}
+.form input[type=text],.form input[type=email]{width:100%;font:inherit;font-size:16px;padding:15px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--card-bg);color:var(--ink)}
+.form input:focus{outline:none;border-color:var(--pnk-d)}
+.form .feld{display:grid;gap:6px}
+.einw{font-size:12.5px;line-height:1.5;color:var(--mid);margin:2px 0 4px}
+.einw a{color:var(--plum)}
+.hp{position:absolute;left:-5000px}
+.ok{display:none;background:var(--grn);border-radius:16px;padding:18px 20px;font-size:15px;line-height:1.55}
+.ok b{color:var(--grn-d)}
+.fehler{display:none;color:var(--pnk-d);font-size:13.5px}
 footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--mid)}
 footer .name{font-family:'Lora';font-weight:700;color:var(--plum);font-size:16px;margin-bottom:4px}
 footer a{color:var(--plum);font-weight:600;text-decoration:underline;text-underline-offset:2px}
@@ -54,8 +64,23 @@ footer a{color:var(--plum);font-weight:600;text-decoration:underline;text-underl
   <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--pnk-d)"/><path d="M4.5 8.2L6.8 10.5L11.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Deine Bio in vier Zeilen, zum Ausfüllen</span></li>
   <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--pnk-d)"/><path d="M4.5 8.2L6.8 10.5L11.5 5.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mini-Checkliste zum Abhaken</span></li>
  </ul>
- <a class="cta" href="dateien/dein-profil-check.pdf" download>Jetzt kostenlos herunterladen</a>
- <p class="hinweis">PDF, 7 Seiten, keine Anmeldung nötig.</p>
+ <form class="form" id="anmeldung" method="POST" action="https://8be213a7.sibforms.com/serve/MUIFAL00E_K7qHt0Ds0bhWUCop0Hr4dHuzEllI0cWJrj_s0KodmR3AadyfXUlLSQSz8YYJNu0docudnLuuUR55sfUR7AZRtDxjSyRBFunN0dHwN9oCSbEm57gOmi94PWCRys2KiVG91ew22bHOOQ9sb1wNqXScYaNEPie5b7yuRTGH7nMmaZeRzZ-CgT-iZ9RUJOGZKzEMQtYEAW2w==" target="brevo_ziel">
+  <div class="feld"><label for="VORNAME">Dein Vorname</label><input type="text" id="VORNAME" name="VORNAME" autocomplete="given-name" required></div>
+  <div class="feld"><label for="EMAIL">Deine E-Mail-Adresse</label><input type="email" id="EMAIL" name="EMAIL" autocomplete="email" required></div>
+  <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="locale" value="de"><input type="hidden" name="html_type" value="simple">
+  <p class="einw">Mit dem Klick bekommst du den Guide per E-Mail und danach meinen Newsletter mit Tipps, ab und zu auch mit Empfehlungen. Abmelden geht jederzeit mit einem Klick. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <button class="cta" type="submit">Guide kostenlos anfordern</button>
+  <p class="fehler" id="fehler">Das hat leider nicht geklappt. Bitte prüf deine E-Mail-Adresse und versuch es noch einmal.</p>
+ </form>
+ <div class="ok" id="ok"><b>Fast geschafft!</b><br>Schau in dein Postfach und bestätige deine E-Mail-Adresse. Direkt danach kommt dein Profil-Check. Nichts da? Schau kurz im Spam- oder Werbung-Ordner nach.</div>
+ <iframe name="brevo_ziel" title="Anmeldung" style="display:none"></iframe>
+ <p class="hinweis">PDF, 7 Seiten, kommt sofort nach der Bestätigung.</p>
+ <script>
+ document.getElementById('anmeldung').addEventListener('submit',function(){
+  var f=this;setTimeout(function(){f.style.display='none';document.getElementById('ok').style.display='block';},600);
+ });
+ </script>
  <footer>
   <div class="name">von Lera</div>
   <div><a href="https://www.instagram.com/the.femalesoul/" target="_blank" rel="noopener">@the.femalesoul</a> &middot; <a href="https://www.the-femalesoul.de" target="_blank" rel="noopener">www.the-femalesoul.de</a></div>
